@@ -1,0 +1,26 @@
+form#system-config label {
+	float: none;
+	text-align: left;
+	width: auto;
+}
+
+form#system-config p span.instructions {
+	margin: 0;
+}
+
+form#system-config p input.text {
+	width: 200px;
+}
+
+form#system-config p select {
+	width: 200px;
+}
+
+.system-settings-row {
+	clear: both;
+}
+
+.system-settings-column {
+	float: left;
+	width: 50%;
+}
