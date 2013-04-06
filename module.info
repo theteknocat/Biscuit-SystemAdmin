@@ -1,0 +1,3 @@
+name = "SystemAdmin"
+description = "Provides system administration functions such as configuration, module/extension management and other developer-level functions"
+version = "2.2"

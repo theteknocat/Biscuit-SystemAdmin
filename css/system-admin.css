@@ -3,9 +3,21 @@ form#system-config label {
 	text-align: left;
 	width: auto;
 }
-
-form#system-config p span.instructions {
+form#system-config .field-container .radio-label-pair label,
+form#system-config .field-container.file-info label {
+	float: left !important;
+}
+form#system-config .field-container.file-info span {
+	float: none !important;
+}
+form#system-config .complex-element-container {
+	float: none;
 	margin: 0;
+	width: 295px;
+}
+
+form#system-config span.instructions {
+	margin: 8px 0 0;
 }
 
 form#system-config p input.text {
@@ -23,4 +35,134 @@ form#system-config p select {
 .system-settings-column {
 	float: left;
 	width: 50%;
+}
+
+.config-menu-row {
+	clear: both;
+}
+
+.config-menu-row .config-menu-column {
+	width: 50%;
+	float: left;
+}
+
+.config-menu-row .config-menu-column ul {
+	margin: 0;
+	padding: 0;
+	list-style: none;
+}
+.config-menu-row .config-menu-column ul li {
+	list-style: none;
+	float: left;
+	width: 50%;
+	margin: 0 !important;
+	padding: 0 !important;
+}
+.config-menu-row .config-menu-column ul li a.ui-button {
+	float: none;
+	margin: 5px;
+	text-align: left;
+}
+.config-menu-row .config-menu-column fieldset.first {
+	margin-right: 10px;
+}
+
+#module-list-headings,
+#extension-list-headings {
+	margin: 0;
+}
+
+#module-list,
+#extension-list {
+	position: relative;
+	margin-bottom: 1.4em;
+}
+
+.module-list-item {
+	cursor: move;
+}
+.module-list-item.inactive .cell,
+.extension-list-item.inactive .cell {
+	opacity: 0.4;
+	filter:alpha(opacity=40);
+	-moz-opacity: 0.4;
+}
+.module-list-item.inactive:hover .cell,
+.module-list-item.inactive.hovered .cell,
+.extension-list-item.inactive:hover .cell,
+.extension-list-item.inactive.hovered .cell {
+	opacity: 1 !important;
+	filter:alpha(opacity=100) !important;
+	-moz-opacity: 1 !important;
+}
+.module-list-item.missing .cell,
+.extension-list-item.missing .cell {
+	color: red;
+}
+.module-list-item .cell,
+.extension-list-item .cell {
+	float: left;
+}
+
+.module-list-item .cell-content,
+.extension-list-item .cell-content {
+	padding: 5px;
+}
+
+.module-list-item .cell-content .controls,
+.extension-list-item .cell-content .controls {
+	background: none;
+	border: none;
+	padding: 0;
+	margin: 0;
+}
+
+.module-list-item .cell-content .controls a,
+.extension-list-item .cell-content .controls a {
+	float: right;
+	margin: 0 0 0 5px;
+}
+.other-themes .theme-item {
+	float: left;
+	width: 48%;
+	margin: 0 1% 15px;
+}
+.theme-item-content {
+	padding: 10px;
+	border: 1px solid #aaa;
+	-moz-border-radius: 8px;
+	-webkit-border-radius: 8px;
+	border-radius: 8px;
+	-moz-box-shadow: 1px 1px 8px #aaa;
+	-webkit-box-shadow: 1px 1px 8px #aaa;
+	box-shadow: 1px 1px 8px #aaa;
+	background: #fff;
+}
+.theme-image {
+	float: left;
+	margin: 0 15px 15px 0;
+	border: 2px solid #ccc;
+	width: 130px;
+	overflow: hidden;
+	-moz-border-radius: 6px;
+	-webkit-border-radius: 6px;
+	border-radius: 6px;
+}
+.theme-image img {
+	vertical-align: top;
+	-moz-border-radius: 4px;
+	-webkit-border-radius: 4px;
+	border-radius: 4px;
+}
+.active-theme .theme-image {
+	width: 280px !important;
+	margin: 0 15px 0 0 !important;
+	-moz-border-radius: 8px !important;
+	-webkit-border-radius: 8px !important;
+	border-radius: 8px !important;
+}
+.active-theme .theme-image img {
+	-moz-border-radius: 6px !important;
+	-webkit-border-radius: 6px !important;
+	border-radius: 6px !important;
 }

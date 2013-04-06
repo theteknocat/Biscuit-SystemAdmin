@@ -1,0 +1,276 @@
+body {
+	background: #111 !important;
+	margin-top: 85px !important;
+}
+h1, h2, h3, h4, h5, h6, p, td, span {
+	font-family: 'Lucida Grande', 'Lucida Sans Unicode', Arial, Helvetica, sans-serif !important;
+}
+#debug-content .debug-content {
+	height: 100%;
+	padding: 0;
+	z-index: 5;
+	background: #111;
+	position: relative;
+}
+#debug-content .stripe-odd {
+	background-color: #111 !important;
+}
+#debug-content .stripe-even {
+	background-color: #222 !important;
+}
+#debug-content .debug-content h1 {
+	text-align: center;
+	font-weight: normal;
+	font-size: 18px;
+	color: #555;
+	background: none;
+	padding: 30px 0 !important;
+	margin: 0 !important;
+}
+
+#debug-content pre {
+	background: none;
+	padding: 0;
+	margin: 0;
+}
+
+#debug-request-summary table th {
+	width: 140px;
+}
+
+.debug-content table {
+	margin: 0px;
+}
+
+#debug-content th {
+	border: none;
+	background: #484848;
+	padding: 4px;
+	color: #aaa;
+}
+
+#debug-content table {
+	background: #111;
+}
+
+#debug-content td {
+	border: none;
+	padding: 4px;
+	color: #888;
+	font-family: monospace !important;
+	font-size: 12px;
+}
+
+#debug-content #debug-console p {
+	border: none;
+	padding: 4px;
+	color: #ddd;
+	font-family: monospace !important;
+	font-size: 12px;
+	margin: 0;
+	color: #c1a761;
+}
+
+#debug-content #debug-error td {
+	color: #b45353;
+}
+
+#debug-content #debug-db-queries td {
+	color: #597fb7;
+}
+
+#debug-content #debug-events td {
+	color: #7ba55d;
+}
+
+#debug-content #debug-nav {
+	height: 20px;
+	background: #bbb url(/framework/modules/system_admin/images/tab-bg.gif);
+	border-bottom: 1px solid #303030;
+	position: fixed;
+	left: 0;
+	top: 0;
+	width: 100%;
+	z-index: 900;
+}
+
+#debug-nav ul {
+	margin: 0;
+	padding: 0 5px;
+	height: 20px;
+	list-style-type: none;
+}
+
+#debug-nav ul li {
+	float: left;
+	margin: 0;
+	padding: 0;
+}
+
+#debug-nav a,
+#debug-nav a:active,
+#debug-nav a:visited,
+#debug-nav a:focus
+{
+	display: block;
+	padding: 2px 15px;
+	margin: 0 5px 0 0;
+	font-size: 10px;
+	border: none;
+	-webkit-border-bottom-right-radius: 3px;
+	-webkit-border-bottom-left-radius: 3px;
+	-moz-border-radius-bottomright: 3px;
+	-moz-border-radius-bottomleft: 3px;
+	border-bottom-right-radius: 3px;
+	border-bottom-left-radius: 3px;	text-decoration: none;
+	outline: none;
+	color: #CCCCCC;
+	font-weight: bold;
+}
+
+#debug-nav a:hover,
+#debug-nav a.selected,
+#debug-nav a.selected:active,
+#debug-nav a.selected:visited,
+#debug-nav a.selected:focus
+{
+	color: #333;
+	background: #c6ced4;
+	border: none;
+	text-decoration: none;
+}
+#debug-nav ul li#delete-button {
+	float: right;
+}
+#debug-nav ul li#delete-button a,
+#debug-nav ul li#delete-button a:active,
+#debug-nav ul li#delete-button a:visited,
+#debug-nav ul li#delete-button a:focus {
+	display: block;
+	float: right;
+	padding: 1px 10px;
+	margin: 0;
+	background: #bbb url(/framework/themes/sea_biscuit/images/jquery-ui/ui-bg_highlight-hard_100_bbbbbb_1x100.png) repeat-x 50% 50%;
+	border: 1px solid #888888;
+	-moz-box-shadow: none !important;
+	-webkit-box-shadow: none !important;
+	box-shadow: none !important;
+	-moz-border-radius: 10px;
+	-webkit-border-radius: 10px;
+	border-radius: 10px;
+	color: #c50800 !important;
+	font-size: 10px !important;
+	line-height: 16px;
+	text-decoration: none !important;
+	text-shadow: 0 0 3px #FFFFFF;
+	font-weight: bold !important;
+	text-align: center;
+}
+#debug-nav ul li#delete-button a:hover {
+	background: #bbb url(/framework/themes/sea_biscuit/images/jquery-ui/ui-bg_inset-hard_100_bbbbbb_1x100.png) 50% 50% repeat-x;
+	text-decoration: none !important;
+	font-weight: bold !important;
+}
+#debug-nav ul li#delete-button a .ui-icon {
+	top: 0 !important;
+}
+#debug-nav ul li#delete-button a .ui-button-text {
+	line-height: inherit !important;
+	padding: 0 0 0 12px !important;
+}
+.debug-content-container a,
+.debug-content-container a:active,
+.debug-content-container a:visited,
+.debug-content-container a:focus {
+	color: #aaa;
+	text-decoration: underline;
+}
+
+.debug-content-container a:hover {
+	text-decoration: none;
+	color: #ccc;
+}
+
+#debug-content .debug-header {
+	background: #555 url(/framework/modules/system_admin/images/heading-bg.gif) repeat-x;
+	color: #aaa;
+	height: 65px;
+	position: fixed;
+	left: 0;
+	top: 20px;
+	z-index: 800;
+	width: 100%;
+}
+
+#debug-content .debug-header .debug-page-count {
+	float: left;
+	font-size: 10px;
+	line-height: 12px;
+	padding: 2px 10px 0 0;
+}
+
+#debug-content .debug-header .debug-flip-buttons {
+	float: right;
+	margin: 12px 6px 0 0;
+	height: 15px;
+}
+
+#debug-content .debug-header .debug-prev-button-placeholder {
+	width: 39px;
+	height: 15px;
+	background: url(/framework/modules/system_admin/images/prev-next.gif) left -30px no-repeat;
+	text-indent: -3000em;
+	float: left;
+}
+
+#debug-content .debug-header .debug-next-button-placeholder {
+	width: 40px;
+	height: 15px;
+	background: url(/framework/modules/system_admin/images/prev-next.gif) -39px -30px no-repeat;
+	text-indent: -3000em;
+	float: left;
+}
+
+#debug-content .debug-header a.debug-flip-button,
+#debug-content .debug-header a.debug-flip-button:active,
+#debug-content .debug-header a.debug-flip-button:focus,
+#debug-content .debug-header a.debug-flip-button:visited,
+#debug-content .debug-header a.debug-flip-button:hover
+{
+	display: block;
+	height: 15px;
+	text-indent: -3000em;
+	outline: none;
+	float: left;
+}
+
+
+#debug-content .debug-header a.debug-prev-button,
+#debug-content .debug-header a.debug-prev-button:active,
+#debug-content .debug-header a.debug-prev-button:focus,
+#debug-content .debug-header a.debug-prev-button:visited
+{
+	width: 39px;
+	background: url(/framework/modules/system_admin/images/prev-next.gif) left top no-repeat;
+}
+
+#debug-content .debug-header a.debug-prev-button:hover {
+	background-position: left -15px;
+}
+
+#debug-content .debug-header a.debug-next-button,
+#debug-content .debug-header a.debug-next-button:active,
+#debug-content .debug-header a.debug-next-button:focus,
+#debug-content .debug-header a.debug-next-button:visited
+{
+	width: 40px;
+	background: url(/framework/modules/system_admin/images/prev-next.gif) -39px top no-repeat;
+}
+
+#debug-content .debug-header a.debug-next-button:hover {
+	background-position: -39px -15px;
+}
+
+#debug-content .debug-header .debug-header-title {
+	padding: 2px 5px 0;
+}
