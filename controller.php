@@ -5,7 +5,7 @@
  * @package Modules
  * @subpackage SystemAdmin
  * @author Peter Epp
- * @version 1.5 $Id: controller.php 14782 2013-01-21 17:15:26Z teknocat $
+ * @version 1.5 $Id: controller.php 14807 2013-06-28 21:04:28Z teknocat $
  */
 class SystemAdmin extends AbstractModuleController {
 	/**
@@ -445,10 +445,12 @@ class SystemAdmin extends AbstractModuleController {
 				$changed_settings = array();
 				foreach ($system_settings as $index => $setting) {
 					if ($setting->value_type() == 'file') {
+						$deleted = false;
 						if ($this->params['remove_setting_'.$setting->id()]) {
 							$this->_remove_file($setting->value());
+							$deleted = true;
 						}
-						$value = $this->_process_upload($setting);
+						$value = $this->_process_upload($setting, $deleted);
 					} else {
 						if (is_array($user_input[$setting->id()])) {
 							$value = implode(',',$user_input[$setting->id()]);
@@ -552,11 +554,11 @@ class SystemAdmin extends AbstractModuleController {
 	 * @return string
 	 * @author Peter Epp
 	 */
-	protected function _process_upload($system_setting) {
+	protected function _process_upload($system_setting, $deleted) {
 		$upload_path = '/var/uploads/system_settings';
 		$file_fieldname = 'setting_'.$system_setting->id().'_file';
 		$all_uploads = Request::files();
-		if (!empty($all_uploads) && !empty($all_uploads[$file_fieldname])) {
+		if (!empty($all_uploads) && !empty($all_uploads[$file_fieldname]) && !empty($all_uploads[$file_fieldname]['name'])) {
 			if (DEBUG) {
 				Console::log_var_dump('Uploaded files for '.get_class($this),$all_uploads[$file_fieldname]);
 			}
@@ -574,10 +576,16 @@ class SystemAdmin extends AbstractModuleController {
 				}
 				return $uploaded_file->file_name();
 			} else {
+				if ($deleted) {
+					return '';
+				}
 				return $system_setting->value();
 			}
 		}
 		Console::log("                        No file upload data, chill");
+		if ($deleted) {
+			return '';
+		}
 		return $system_setting->value();
 	}
 	/**
